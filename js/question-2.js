@@ -8,8 +8,7 @@ async function getGameApi() {
        const facts = results.results;
 
        gameContainer.innerHTML = "";
-      
-      
+            
        for(let i = 0; i < facts.length; i++) {
          if (i === 8) {
            break;
