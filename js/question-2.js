@@ -6,13 +6,16 @@ async function getGameApi() {
       try{ const response = await fetch(url);
        const results = await response.json();
        const facts = results.results;
+
+       gameContainer.innerHTML = "";
+      
       
        for(let i = 0; i < facts.length; i++) {
          if (i === 8) {
            break;
          }
-         console.log(facts)
-         gameContainer.innerHTML += `<div class="text">Name: ${facts[i].name} - Rating: ${facts[i].rating} - Tags: ${facts[i].tags.length}</div>`;
+         
+         gameContainer.innerHTML += `<div class="text"><p>${facts[i].name}</p>Rating: ${facts[i].rating} - Tags: ${facts[i].tags.length}</div>`;
        }
       }catch (error) {
         gameContainer.innerHTML = "Unable to connect to the API";

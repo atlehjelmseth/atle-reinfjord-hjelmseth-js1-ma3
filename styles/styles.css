@@ -1,0 +1,18 @@
+
+.text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+.game-container {
+  margin: auto;
+  width: 50%;
+  border: 3px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
